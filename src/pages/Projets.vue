@@ -82,6 +82,32 @@
         </router-link>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: Oumaimaelbouhamedi@gmail.com</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <nav>
+            <router-link to="/">Accueil</router-link>
+            <router-link to="/projets">Projets</router-link>
+            <router-link to="/contact">Contact</router-link>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>Suivez-moi</h4>
+          <div class="social-links">
+            <a href="#" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Oumaima El Bouhamdi. Tous droits réservés.</p>
+      </div>
+    </footer>
   </main>
 </template>
 
@@ -95,7 +121,7 @@
 h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #2c3e50;
+  color: #D4A5A5;
   text-align: center;
 }
 
@@ -142,18 +168,102 @@ h2 {
 h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+  color: #E6BBB3;
 }
 
 .projet-categorie {
   font-size: 0.9rem;
-  color: #666;
+  color: #d8c2be;
   margin-bottom: 0.5rem;
 }
 
 .projet-description-preview {
   font-size: 0.9rem;
   color: #34495e;
+}
+
+.site-footer {
+  background-color: rgba(255, 245, 238, 0.95);
+  padding: 3rem 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h4 {
+  color: #D4A5A5;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-section nav a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section nav a:hover {
+  color: #D4A5A5;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #D4A5A5;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-bottom p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {

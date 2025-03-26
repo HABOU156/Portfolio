@@ -56,6 +56,9 @@ main {
 .hero-content {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image {
@@ -72,6 +75,7 @@ main {
 #contact h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 form {
@@ -87,6 +91,7 @@ input, textarea {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+  width: 100%;
 }
 
 textarea {
@@ -96,25 +101,45 @@ textarea {
 
 button {
   padding: 1rem 2rem;
-  background-color: #42b883;
+  background-color: #D4A5A5;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 button:hover {
-  background-color: #3aa876;
+  background-color: #E6BBB3;
 }
 
 footer {
   margin-top: auto;
   padding: 2rem;
   text-align: center;
-  background-color: #333;
+  background-color: #D4A5A5;
   color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .hero {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    height: 65vh;
+  }
+  
+  #contact {
+    padding: 3rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -124,6 +149,38 @@ footer {
 
   #contact {
     padding: 2rem 1rem;
+  }
+  
+  #contact h2 {
+    font-size: 1.75rem;
+  }
+  
+  input, textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 50vh;
+  }
+  
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+  
+  form {
+    padding: 0 1rem;
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    padding: 1.5rem;
+    font-size: 0.9rem;
   }
 }
 </style> 
