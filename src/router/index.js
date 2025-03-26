@@ -47,7 +47,7 @@ const router = createRouter({
     {
       path: '/projets/one-shot',
       name: 'oneShot',
-      component: () => import('../pages/projets/OneShot.vue')
+      component: () => import('../pages/projets/OneShot2.vue')
     },
     {
       path: '/projets/habitat-individuel',
